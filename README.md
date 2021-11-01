@@ -4,5 +4,5 @@ Please find the docker-compose and docker files in the web app. which is used as
 
 For the all the pre-process please refer the project report where all the steps with screenshots are present.
 
-Thanks and Regard
-Geethanadh sunkara
+Thanks and Regards
+N Venkata Surya Bharadwaj
