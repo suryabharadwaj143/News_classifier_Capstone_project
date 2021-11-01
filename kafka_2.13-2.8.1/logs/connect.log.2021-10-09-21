@@ -1,0 +1,818 @@
+[2021-10-09 21:38:52,646] INFO Kafka Connect standalone worker initializing ... (org.apache.kafka.connect.cli.ConnectStandalone:68)
+[2021-10-09 21:38:52,659] INFO WorkerInfo values: 
+	jvm.args = -Xmx256M, -XX:+UseG1GC, -XX:MaxGCPauseMillis=20, -XX:InitiatingHeapOccupancyPercent=35, -XX:+ExplicitGCInvokesConcurrent, -Djava.awt.headless=true, -Dcom.sun.management.jmxremote, -Dcom.sun.management.jmxremote.authenticate=false, -Dcom.sun.management.jmxremote.ssl=false, -Dkafka.logs.dir=C:\kafka_2.13-2.8.1/logs, -Dlog4j.configuration=file:C:\kafka_2.13-2.8.1/config/connect-log4j.properties
+	jvm.spec = Oracle Corporation, Java HotSpot(TM) 64-Bit Server VM, 1.8.0_301, 25.301-b09
+	jvm.classpath = C:\kafka_2.13-2.8.1\libs\activation-1.1.1.jar;C:\kafka_2.13-2.8.1\libs\aopalliance-repackaged-2.6.1.jar;C:\kafka_2.13-2.8.1\libs\argparse4j-0.7.0.jar;C:\kafka_2.13-2.8.1\libs\audience-annotations-0.5.0.jar;C:\kafka_2.13-2.8.1\libs\commons-cli-1.4.jar;C:\kafka_2.13-2.8.1\libs\commons-lang3-3.8.1.jar;C:\kafka_2.13-2.8.1\libs\connect-api-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\connect-basic-auth-extension-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\connect-file-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\connect-json-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\connect-mirror-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\connect-mirror-client-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\connect-runtime-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\connect-transforms-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\hk2-api-2.6.1.jar;C:\kafka_2.13-2.8.1\libs\hk2-locator-2.6.1.jar;C:\kafka_2.13-2.8.1\libs\hk2-utils-2.6.1.jar;C:\kafka_2.13-2.8.1\libs\jackson-annotations-2.10.5.jar;C:\kafka_2.13-2.8.1\libs\jackson-core-2.10.5.jar;C:\kafka_2.13-2.8.1\libs\jackson-databind-2.10.5.1.jar;C:\kafka_2.13-2.8.1\libs\jackson-dataformat-csv-2.10.5.jar;C:\kafka_2.13-2.8.1\libs\jackson-datatype-jdk8-2.10.5.jar;C:\kafka_2.13-2.8.1\libs\jackson-jaxrs-base-2.10.5.jar;C:\kafka_2.13-2.8.1\libs\jackson-jaxrs-json-provider-2.10.5.jar;C:\kafka_2.13-2.8.1\libs\jackson-module-jaxb-annotations-2.10.5.jar;C:\kafka_2.13-2.8.1\libs\jackson-module-paranamer-2.10.5.jar;C:\kafka_2.13-2.8.1\libs\jackson-module-scala_2.13-2.10.5.jar;C:\kafka_2.13-2.8.1\libs\jakarta.activation-api-1.2.1.jar;C:\kafka_2.13-2.8.1\libs\jakarta.annotation-api-1.3.5.jar;C:\kafka_2.13-2.8.1\libs\jakarta.inject-2.6.1.jar;C:\kafka_2.13-2.8.1\libs\jakarta.validation-api-2.0.2.jar;C:\kafka_2.13-2.8.1\libs\jakarta.ws.rs-api-2.1.6.jar;C:\kafka_2.13-2.8.1\libs\jakarta.xml.bind-api-2.3.2.jar;C:\kafka_2.13-2.8.1\libs\javassist-3.27.0-GA.jar;C:\kafka_2.13-2.8.1\libs\javax.servlet-api-3.1.0.jar;C:\kafka_2.13-2.8.1\libs\javax.ws.rs-api-2.1.1.jar;C:\kafka_2.13-2.8.1\libs\jaxb-api-2.3.0.jar;C:\kafka_2.13-2.8.1\libs\jersey-client-2.34.jar;C:\kafka_2.13-2.8.1\libs\jersey-common-2.34.jar;C:\kafka_2.13-2.8.1\libs\jersey-container-servlet-2.34.jar;C:\kafka_2.13-2.8.1\libs\jersey-container-servlet-core-2.34.jar;C:\kafka_2.13-2.8.1\libs\jersey-hk2-2.34.jar;C:\kafka_2.13-2.8.1\libs\jersey-server-2.34.jar;C:\kafka_2.13-2.8.1\libs\jetty-client-9.4.43.v20210629.jar;C:\kafka_2.13-2.8.1\libs\jetty-continuation-9.4.43.v20210629.jar;C:\kafka_2.13-2.8.1\libs\jetty-http-9.4.43.v20210629.jar;C:\kafka_2.13-2.8.1\libs\jetty-io-9.4.43.v20210629.jar;C:\kafka_2.13-2.8.1\libs\jetty-security-9.4.43.v20210629.jar;C:\kafka_2.13-2.8.1\libs\jetty-server-9.4.43.v20210629.jar;C:\kafka_2.13-2.8.1\libs\jetty-servlet-9.4.43.v20210629.jar;C:\kafka_2.13-2.8.1\libs\jetty-servlets-9.4.43.v20210629.jar;C:\kafka_2.13-2.8.1\libs\jetty-util-9.4.43.v20210629.jar;C:\kafka_2.13-2.8.1\libs\jetty-util-ajax-9.4.43.v20210629.jar;C:\kafka_2.13-2.8.1\libs\jline-3.12.1.jar;C:\kafka_2.13-2.8.1\libs\jopt-simple-5.0.4.jar;C:\kafka_2.13-2.8.1\libs\kafka-clients-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\kafka-log4j-appender-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\kafka-metadata-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\kafka-raft-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\kafka-shell-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\kafka-streams-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\kafka-streams-examples-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\kafka-streams-scala_2.13-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\kafka-streams-test-utils-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\kafka-tools-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\kafka_2.13-2.8.1-javadoc.jar;C:\kafka_2.13-2.8.1\libs\kafka_2.13-2.8.1-javadoc.jar.asc;C:\kafka_2.13-2.8.1\libs\kafka_2.13-2.8.1-sources.jar;C:\kafka_2.13-2.8.1\libs\kafka_2.13-2.8.1-sources.jar.asc;C:\kafka_2.13-2.8.1\libs\kafka_2.13-2.8.1-test-sources.jar;C:\kafka_2.13-2.8.1\libs\kafka_2.13-2.8.1-test-sources.jar.asc;C:\kafka_2.13-2.8.1\libs\kafka_2.13-2.8.1-test.jar;C:\kafka_2.13-2.8.1\libs\kafka_2.13-2.8.1-test.jar.asc;C:\kafka_2.13-2.8.1\libs\kafka_2.13-2.8.1.jar;C:\kafka_2.13-2.8.1\libs\kafka_2.13-2.8.1.jar.asc;C:\kafka_2.13-2.8.1\libs\log4j-1.2.17.jar;C:\kafka_2.13-2.8.1\libs\lz4-java-1.7.1.jar;C:\kafka_2.13-2.8.1\libs\maven-artifact-3.8.1.jar;C:\kafka_2.13-2.8.1\libs\metrics-core-2.2.0.jar;C:\kafka_2.13-2.8.1\libs\mongo-kafka-connect-1.6.1-all.jar;C:\kafka_2.13-2.8.1\libs\netty-buffer-4.1.62.Final.jar;C:\kafka_2.13-2.8.1\libs\netty-codec-4.1.62.Final.jar;C:\kafka_2.13-2.8.1\libs\netty-common-4.1.62.Final.jar;C:\kafka_2.13-2.8.1\libs\netty-handler-4.1.62.Final.jar;C:\kafka_2.13-2.8.1\libs\netty-resolver-4.1.62.Final.jar;C:\kafka_2.13-2.8.1\libs\netty-transport-4.1.62.Final.jar;C:\kafka_2.13-2.8.1\libs\netty-transport-native-epoll-4.1.62.Final.jar;C:\kafka_2.13-2.8.1\libs\netty-transport-native-unix-common-4.1.62.Final.jar;C:\kafka_2.13-2.8.1\libs\osgi-resource-locator-1.0.3.jar;C:\kafka_2.13-2.8.1\libs\paranamer-2.8.jar;C:\kafka_2.13-2.8.1\libs\plexus-utils-3.2.1.jar;C:\kafka_2.13-2.8.1\libs\reflections-0.9.12.jar;C:\kafka_2.13-2.8.1\libs\rocksdbjni-5.18.4.jar;C:\kafka_2.13-2.8.1\libs\scala-collection-compat_2.13-2.3.0.jar;C:\kafka_2.13-2.8.1\libs\scala-java8-compat_2.13-0.9.1.jar;C:\kafka_2.13-2.8.1\libs\scala-library-2.13.5.jar;C:\kafka_2.13-2.8.1\libs\scala-logging_2.13-3.9.2.jar;C:\kafka_2.13-2.8.1\libs\scala-reflect-2.13.5.jar;C:\kafka_2.13-2.8.1\libs\slf4j-api-1.7.30.jar;C:\kafka_2.13-2.8.1\libs\slf4j-log4j12-1.7.30.jar;C:\kafka_2.13-2.8.1\libs\snappy-java-1.1.8.1.jar;C:\kafka_2.13-2.8.1\libs\zookeeper-3.5.9.jar;C:\kafka_2.13-2.8.1\libs\zookeeper-jute-3.5.9.jar;C:\kafka_2.13-2.8.1\libs\zstd-jni-1.4.9-1.jar
+	os.spec = Windows 10, amd64, 10.0
+	os.vcpus = 8
+ (org.apache.kafka.connect.runtime.WorkerInfo:71)
+[2021-10-09 21:38:52,665] INFO Scanning for plugin classes. This might take a moment ... (org.apache.kafka.connect.cli.ConnectStandalone:77)
+[2021-10-09 21:38:54,297] INFO Registered loader: sun.misc.Launcher$AppClassLoader@764c12b6 (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:269)
+[2021-10-09 21:38:54,298] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,300] INFO Added plugin 'com.mongodb.kafka.connect.MongoSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,300] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,300] INFO Added plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,300] INFO Added plugin 'org.apache.kafka.connect.tools.SchemaSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,301] INFO Added plugin 'org.apache.kafka.connect.tools.MockSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,301] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,301] INFO Added plugin 'org.apache.kafka.connect.tools.VerifiableSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,301] INFO Added plugin 'org.apache.kafka.connect.tools.VerifiableSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,301] INFO Added plugin 'org.apache.kafka.connect.tools.MockSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,302] INFO Added plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,302] INFO Added plugin 'org.apache.kafka.connect.tools.MockConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,303] INFO Added plugin 'com.mongodb.kafka.connect.MongoSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,303] INFO Added plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,303] INFO Added plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,303] INFO Added plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,304] INFO Added plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,304] INFO Added plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,304] INFO Added plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,304] INFO Added plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,305] INFO Added plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,305] INFO Added plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,305] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,305] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,305] INFO Added plugin 'org.apache.kafka.connect.transforms.ReplaceField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,305] INFO Added plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,306] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,306] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,306] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,306] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,306] INFO Added plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,306] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,307] INFO Added plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,307] INFO Added plugin 'org.apache.kafka.connect.transforms.MaskField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,307] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,307] INFO Added plugin 'org.apache.kafka.connect.transforms.Cast$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,307] INFO Added plugin 'org.apache.kafka.connect.runtime.PredicatedTransformation' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,307] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,308] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,308] INFO Added plugin 'org.apache.kafka.connect.transforms.InsertField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,308] INFO Added plugin 'org.apache.kafka.connect.transforms.Flatten$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,308] INFO Added plugin 'org.apache.kafka.connect.transforms.SetSchemaMetadata$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,308] INFO Added plugin 'org.apache.kafka.connect.transforms.ExtractField$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,308] INFO Added plugin 'org.apache.kafka.connect.transforms.TimestampConverter$Value' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,308] INFO Added plugin 'org.apache.kafka.connect.transforms.HoistField$Key' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,309] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,309] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,309] INFO Added plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,309] INFO Added plugin 'org.apache.kafka.common.config.provider.FileConfigProvider' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,310] INFO Added plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,310] INFO Added plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,310] INFO Added plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,310] INFO Added plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:198)
+[2021-10-09 21:38:54,312] INFO Added aliases 'MongoSinkConnector' and 'MongoSink' to plugin 'com.mongodb.kafka.connect.MongoSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,312] INFO Added aliases 'MongoSourceConnector' and 'MongoSource' to plugin 'com.mongodb.kafka.connect.MongoSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,313] INFO Added aliases 'FileStreamSinkConnector' and 'FileStreamSink' to plugin 'org.apache.kafka.connect.file.FileStreamSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,313] INFO Added aliases 'FileStreamSourceConnector' and 'FileStreamSource' to plugin 'org.apache.kafka.connect.file.FileStreamSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,313] INFO Added aliases 'MirrorCheckpointConnector' and 'MirrorCheckpoint' to plugin 'org.apache.kafka.connect.mirror.MirrorCheckpointConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,313] INFO Added aliases 'MirrorHeartbeatConnector' and 'MirrorHeartbeat' to plugin 'org.apache.kafka.connect.mirror.MirrorHeartbeatConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,314] INFO Added aliases 'MirrorSourceConnector' and 'MirrorSource' to plugin 'org.apache.kafka.connect.mirror.MirrorSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,314] INFO Added aliases 'MockConnector' and 'Mock' to plugin 'org.apache.kafka.connect.tools.MockConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,314] INFO Added aliases 'MockSinkConnector' and 'MockSink' to plugin 'org.apache.kafka.connect.tools.MockSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,315] INFO Added aliases 'MockSourceConnector' and 'MockSource' to plugin 'org.apache.kafka.connect.tools.MockSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,315] INFO Added aliases 'SchemaSourceConnector' and 'SchemaSource' to plugin 'org.apache.kafka.connect.tools.SchemaSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,315] INFO Added aliases 'VerifiableSinkConnector' and 'VerifiableSink' to plugin 'org.apache.kafka.connect.tools.VerifiableSinkConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,316] INFO Added aliases 'VerifiableSourceConnector' and 'VerifiableSource' to plugin 'org.apache.kafka.connect.tools.VerifiableSourceConnector' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,316] INFO Added aliases 'ByteArrayConverter' and 'ByteArray' to plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,316] INFO Added aliases 'DoubleConverter' and 'Double' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,317] INFO Added aliases 'FloatConverter' and 'Float' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,326] INFO Added aliases 'IntegerConverter' and 'Integer' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,327] INFO Added aliases 'LongConverter' and 'Long' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,327] INFO Added aliases 'ShortConverter' and 'Short' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,327] INFO Added aliases 'JsonConverter' and 'Json' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,327] INFO Added aliases 'StringConverter' and 'String' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,328] INFO Added aliases 'ByteArrayConverter' and 'ByteArray' to plugin 'org.apache.kafka.connect.converters.ByteArrayConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,328] INFO Added aliases 'DoubleConverter' and 'Double' to plugin 'org.apache.kafka.connect.converters.DoubleConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,328] INFO Added aliases 'FloatConverter' and 'Float' to plugin 'org.apache.kafka.connect.converters.FloatConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,328] INFO Added aliases 'IntegerConverter' and 'Integer' to plugin 'org.apache.kafka.connect.converters.IntegerConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,329] INFO Added aliases 'LongConverter' and 'Long' to plugin 'org.apache.kafka.connect.converters.LongConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,329] INFO Added aliases 'ShortConverter' and 'Short' to plugin 'org.apache.kafka.connect.converters.ShortConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,329] INFO Added aliases 'JsonConverter' and 'Json' to plugin 'org.apache.kafka.connect.json.JsonConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,330] INFO Added alias 'SimpleHeaderConverter' to plugin 'org.apache.kafka.connect.storage.SimpleHeaderConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2021-10-09 21:38:54,330] INFO Added aliases 'StringConverter' and 'String' to plugin 'org.apache.kafka.connect.storage.StringConverter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,331] INFO Added aliases 'PredicatedTransformation' and 'Predicated' to plugin 'org.apache.kafka.connect.runtime.PredicatedTransformation' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,332] INFO Added alias 'Filter' to plugin 'org.apache.kafka.connect.transforms.Filter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2021-10-09 21:38:54,332] INFO Added alias 'RegexRouter' to plugin 'org.apache.kafka.connect.transforms.RegexRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2021-10-09 21:38:54,332] INFO Added alias 'TimestampRouter' to plugin 'org.apache.kafka.connect.transforms.TimestampRouter' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2021-10-09 21:38:54,334] INFO Added alias 'ValueToKey' to plugin 'org.apache.kafka.connect.transforms.ValueToKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2021-10-09 21:38:54,334] INFO Added alias 'HasHeaderKey' to plugin 'org.apache.kafka.connect.transforms.predicates.HasHeaderKey' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2021-10-09 21:38:54,334] INFO Added alias 'RecordIsTombstone' to plugin 'org.apache.kafka.connect.transforms.predicates.RecordIsTombstone' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2021-10-09 21:38:54,334] INFO Added alias 'TopicNameMatches' to plugin 'org.apache.kafka.connect.transforms.predicates.TopicNameMatches' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2021-10-09 21:38:54,334] INFO Added alias 'BasicAuthSecurityRestExtension' to plugin 'org.apache.kafka.connect.rest.basic.auth.extension.BasicAuthSecurityRestExtension' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:424)
+[2021-10-09 21:38:54,335] INFO Added aliases 'AllConnectorClientConfigOverridePolicy' and 'All' to plugin 'org.apache.kafka.connect.connector.policy.AllConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,335] INFO Added aliases 'NoneConnectorClientConfigOverridePolicy' and 'None' to plugin 'org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,335] INFO Added aliases 'PrincipalConnectorClientConfigOverridePolicy' and 'Principal' to plugin 'org.apache.kafka.connect.connector.policy.PrincipalConnectorClientConfigOverridePolicy' (org.apache.kafka.connect.runtime.isolation.DelegatingClassLoader:427)
+[2021-10-09 21:38:54,354] INFO StandaloneConfig values: 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	admin.listeners = null
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	config.providers = []
+	connector.client.config.override.policy = None
+	header.converter = class org.apache.kafka.connect.storage.SimpleHeaderConverter
+	internal.key.converter = class org.apache.kafka.connect.json.JsonConverter
+	internal.value.converter = class org.apache.kafka.connect.json.JsonConverter
+	key.converter = class org.apache.kafka.connect.json.JsonConverter
+	listeners = null
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	offset.flush.interval.ms = 10000
+	offset.flush.timeout.ms = 5000
+	offset.storage.file.filename = /tmp/connect.offsets
+	plugin.path = null
+	response.http.headers.config = 
+	rest.advertised.host.name = null
+	rest.advertised.listener = null
+	rest.advertised.port = null
+	rest.extension.classes = []
+	rest.host.name = null
+	rest.port = 8083
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	task.shutdown.graceful.timeout.ms = 5000
+	topic.creation.enable = true
+	topic.tracking.allow.reset = true
+	topic.tracking.enable = true
+	value.converter = class org.apache.kafka.connect.json.JsonConverter
+ (org.apache.kafka.connect.runtime.standalone.StandaloneConfig:372)
+[2021-10-09 21:38:54,355] WARN Variables cannot be used in the 'plugin.path' property, since the property is used by plugin scanning before the config providers that replace the variables are initialized. The raw value 'null' was used for plugin scanning, as opposed to the transformed value 'null', and this may cause unexpected results. (org.apache.kafka.connect.runtime.WorkerConfig:420)
+[2021-10-09 21:38:54,356] INFO Creating Kafka admin client (org.apache.kafka.connect.util.ConnectUtils:49)
+[2021-10-09 21:38:54,360] INFO AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:372)
+[2021-10-09 21:38:54,450] WARN The configuration 'offset.flush.interval.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:54,450] WARN The configuration 'key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:54,451] WARN The configuration 'offset.storage.file.filename' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:54,452] WARN The configuration 'value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:54,452] WARN The configuration 'value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:54,452] WARN The configuration 'key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:54,453] INFO Kafka version: 2.8.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-10-09 21:38:54,453] INFO Kafka commitId: 839b886f9b732b15 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-10-09 21:38:54,453] INFO Kafka startTimeMs: 1633795734452 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-10-09 21:38:54,847] INFO Kafka cluster ID: gVX3xWSvTLGJBqwtaZGUiQ (org.apache.kafka.connect.util.ConnectUtils:65)
+[2021-10-09 21:38:54,850] INFO App info kafka.admin.client for adminclient-1 unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2021-10-09 21:38:54,859] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2021-10-09 21:38:54,860] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2021-10-09 21:38:54,861] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2021-10-09 21:38:54,880] INFO Logging initialized @2866ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log:170)
+[2021-10-09 21:38:54,965] INFO Added connector for http://:8083 (org.apache.kafka.connect.runtime.rest.RestServer:132)
+[2021-10-09 21:38:54,965] INFO Initializing REST server (org.apache.kafka.connect.runtime.rest.RestServer:204)
+[2021-10-09 21:38:54,977] INFO jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 1.8.0_301-b09 (org.eclipse.jetty.server.Server:375)
+[2021-10-09 21:38:55,016] INFO Started http_8083@7c56e013{HTTP/1.1, (http/1.1)}{0.0.0.0:8083} (org.eclipse.jetty.server.AbstractConnector:331)
+[2021-10-09 21:38:55,017] INFO Started @3003ms (org.eclipse.jetty.server.Server:415)
+[2021-10-09 21:38:55,040] INFO Advertised URI: http://192.168.1.8:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:371)
+[2021-10-09 21:38:55,040] INFO REST server listening at http://192.168.1.8:8083/, advertising URL http://192.168.1.8:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:219)
+[2021-10-09 21:38:55,041] INFO Advertised URI: http://192.168.1.8:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:371)
+[2021-10-09 21:38:55,041] INFO REST admin endpoints at http://192.168.1.8:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:220)
+[2021-10-09 21:38:55,042] INFO Advertised URI: http://192.168.1.8:8083/ (org.apache.kafka.connect.runtime.rest.RestServer:371)
+[2021-10-09 21:38:55,042] INFO Setting up None Policy for ConnectorClientConfigOverride. This will disallow any client configuration to be overridden (org.apache.kafka.connect.connector.policy.NoneConnectorClientConfigOverridePolicy:45)
+[2021-10-09 21:38:55,052] INFO Creating Kafka admin client (org.apache.kafka.connect.util.ConnectUtils:49)
+[2021-10-09 21:38:55,053] INFO AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig:372)
+[2021-10-09 21:38:55,059] WARN The configuration 'offset.flush.interval.ms' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:55,059] WARN The configuration 'key.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:55,059] WARN The configuration 'offset.storage.file.filename' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:55,059] WARN The configuration 'value.converter.schemas.enable' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:55,060] WARN The configuration 'value.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:55,060] WARN The configuration 'key.converter' was supplied but isn't a known config. (org.apache.kafka.clients.admin.AdminClientConfig:380)
+[2021-10-09 21:38:55,060] INFO Kafka version: 2.8.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-10-09 21:38:55,060] INFO Kafka commitId: 839b886f9b732b15 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-10-09 21:38:55,060] INFO Kafka startTimeMs: 1633795735060 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-10-09 21:38:55,080] INFO Kafka cluster ID: gVX3xWSvTLGJBqwtaZGUiQ (org.apache.kafka.connect.util.ConnectUtils:65)
+[2021-10-09 21:38:55,082] INFO App info kafka.admin.client for adminclient-2 unregistered (org.apache.kafka.common.utils.AppInfoParser:83)
+[2021-10-09 21:38:55,086] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics:659)
+[2021-10-09 21:38:55,087] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics:663)
+[2021-10-09 21:38:55,087] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics:669)
+[2021-10-09 21:38:55,091] INFO Kafka version: 2.8.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-10-09 21:38:55,091] INFO Kafka commitId: 839b886f9b732b15 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-10-09 21:38:55,091] INFO Kafka startTimeMs: 1633795735090 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-10-09 21:38:55,232] INFO JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:372)
+[2021-10-09 21:38:55,235] INFO JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:372)
+[2021-10-09 21:38:55,246] INFO Kafka Connect standalone worker initialization took 2597ms (org.apache.kafka.connect.cli.ConnectStandalone:99)
+[2021-10-09 21:38:55,247] INFO Kafka Connect starting (org.apache.kafka.connect.runtime.Connect:51)
+[2021-10-09 21:38:55,247] INFO Herder starting (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:94)
+[2021-10-09 21:38:55,249] INFO Worker starting (org.apache.kafka.connect.runtime.Worker:191)
+[2021-10-09 21:38:55,250] INFO Starting FileOffsetBackingStore with file \tmp\connect.offsets (org.apache.kafka.connect.storage.FileOffsetBackingStore:58)
+[2021-10-09 21:38:55,254] INFO Worker started (org.apache.kafka.connect.runtime.Worker:198)
+[2021-10-09 21:38:55,255] INFO Herder started (org.apache.kafka.connect.runtime.standalone.StandaloneHerder:97)
+[2021-10-09 21:38:55,255] INFO Initializing REST resources (org.apache.kafka.connect.runtime.rest.RestServer:224)
+[2021-10-09 21:38:55,308] INFO Adding admin resources to main listener (org.apache.kafka.connect.runtime.rest.RestServer:241)
+[2021-10-09 21:38:55,391] INFO DefaultSessionIdManager workerName=node0 (org.eclipse.jetty.server.session:334)
+[2021-10-09 21:38:55,391] INFO No SessionScavenger set, using defaults (org.eclipse.jetty.server.session:339)
+[2021-10-09 21:38:55,394] INFO node0 Scavenging every 600000ms (org.eclipse.jetty.server.session:132)
+[2021-10-09 21:38:55,981] INFO Started o.e.j.s.ServletContextHandler@55a8dc49{/,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler:915)
+[2021-10-09 21:38:55,982] INFO REST resources initialized; server is started and ready to handle requests (org.apache.kafka.connect.runtime.rest.RestServer:319)
+[2021-10-09 21:38:55,983] INFO Kafka Connect started (org.apache.kafka.connect.runtime.Connect:57)
+[2021-10-09 21:38:56,075] INFO MongoSinkTopicConfig values: 
+	change.data.capture.handler = 
+	collection = news_feed
+	database = news_database
+	delete.on.null.values = false
+	document.id.strategy = com.mongodb.kafka.connect.sink.processor.id.strategy.BsonOidStrategy
+	document.id.strategy.overwrite.existing = false
+	document.id.strategy.partial.key.projection.list = 
+	document.id.strategy.partial.key.projection.type = 
+	document.id.strategy.partial.value.projection.list = 
+	document.id.strategy.partial.value.projection.type = 
+	document.id.strategy.uuid.format = string
+	errors.log.enable = false
+	errors.tolerance = none
+	field.renamer.mapping = []
+	field.renamer.regexp = []
+	key.projection.list = 
+	key.projection.type = none
+	max.batch.size = 0
+	max.num.retries = 3
+	mongo.errors.log.enable = false
+	mongo.errors.tolerance = none
+	namespace.mapper = com.mongodb.kafka.connect.sink.namespace.mapping.DefaultNamespaceMapper
+	namespace.mapper.error.if.invalid = false
+	namespace.mapper.key.collection.field = 
+	namespace.mapper.key.database.field = 
+	namespace.mapper.value.collection.field = 
+	namespace.mapper.value.database.field = 
+	post.processor.chain = [com.mongodb.kafka.connect.sink.processor.DocumentIdAdder]
+	rate.limiting.every.n = 0
+	rate.limiting.timeout = 0
+	retries.defer.timeout = 5000
+	timeseries.expire.after.seconds = 0
+	timeseries.granularity = 
+	timeseries.metafield = 
+	timeseries.timefield = 
+	timeseries.timefield.auto.convert = false
+	timeseries.timefield.auto.convert.date.format = yyyy-MM-dd[['T'][ ]][HH:mm:ss[[.][SSSSSS][SSS]][ ]VV[ ]'['VV']'][HH:mm:ss[[.][SSSSSS][SSS]][ ]X][HH:mm:ss[[.][SSSSSS][SSS]]]
+	timeseries.timefield.auto.convert.locale.language.tag = 
+	topic = newsarticles
+	value.projection.list = 
+	value.projection.type = none
+	writemodel.strategy = com.mongodb.kafka.connect.sink.writemodel.strategy.DefaultWriteModelStrategy
+ (com.mongodb.kafka.connect.sink.MongoSinkTopicConfig:372)
+[2021-10-09 21:38:56,086] INFO MongoSinkTopicConfig values: 
+	change.data.capture.handler = 
+	collection = news_feed
+	database = news_database
+	delete.on.null.values = false
+	document.id.strategy = com.mongodb.kafka.connect.sink.processor.id.strategy.BsonOidStrategy
+	document.id.strategy.overwrite.existing = false
+	document.id.strategy.partial.key.projection.list = 
+	document.id.strategy.partial.key.projection.type = 
+	document.id.strategy.partial.value.projection.list = 
+	document.id.strategy.partial.value.projection.type = 
+	document.id.strategy.uuid.format = string
+	errors.log.enable = false
+	errors.tolerance = none
+	field.renamer.mapping = []
+	field.renamer.regexp = []
+	key.projection.list = 
+	key.projection.type = none
+	max.batch.size = 0
+	max.num.retries = 3
+	mongo.errors.log.enable = false
+	mongo.errors.tolerance = none
+	namespace.mapper = com.mongodb.kafka.connect.sink.namespace.mapping.DefaultNamespaceMapper
+	namespace.mapper.error.if.invalid = false
+	namespace.mapper.key.collection.field = 
+	namespace.mapper.key.database.field = 
+	namespace.mapper.value.collection.field = 
+	namespace.mapper.value.database.field = 
+	post.processor.chain = [com.mongodb.kafka.connect.sink.processor.DocumentIdAdder]
+	rate.limiting.every.n = 0
+	rate.limiting.timeout = 0
+	retries.defer.timeout = 5000
+	timeseries.expire.after.seconds = 0
+	timeseries.granularity = 
+	timeseries.metafield = 
+	timeseries.timefield = 
+	timeseries.timefield.auto.convert = false
+	timeseries.timefield.auto.convert.date.format = yyyy-MM-dd[['T'][ ]][HH:mm:ss[[.][SSSSSS][SSS]][ ]VV[ ]'['VV']'][HH:mm:ss[[.][SSSSSS][SSS]][ ]X][HH:mm:ss[[.][SSSSSS][SSS]]]
+	timeseries.timefield.auto.convert.locale.language.tag = 
+	topic = newsarticles
+	value.projection.list = 
+	value.projection.type = none
+	writemodel.strategy = com.mongodb.kafka.connect.sink.writemodel.strategy.DefaultWriteModelStrategy
+ (com.mongodb.kafka.connect.sink.MongoSinkTopicConfig:372)
+[2021-10-09 21:38:56,128] INFO Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'} (org.mongodb.driver.cluster:71)
+[2021-10-09 21:38:56,227] INFO Opened connection [connectionId{localValue:1, serverValue:36}] to localhost:27017 (org.mongodb.driver.connection:71)
+[2021-10-09 21:38:56,227] INFO Opened connection [connectionId{localValue:2, serverValue:35}] to localhost:27017 (org.mongodb.driver.connection:71)
+[2021-10-09 21:38:56,230] INFO Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=30442500} (org.mongodb.driver.cluster:71)
+[2021-10-09 21:38:56,238] INFO AbstractConfig values: 
+ (org.apache.kafka.common.config.AbstractConfig:372)
+[2021-10-09 21:38:56,252] INFO Creating connector mongo-sink of type com.mongodb.kafka.connect.MongoSinkConnector (org.apache.kafka.connect.runtime.Worker:271)
+[2021-10-09 21:38:56,252] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = mongo-sink
+	predicates = []
+	tasks.max = 1
+	topics = [newsarticles]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:372)
+[2021-10-09 21:38:56,255] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = mongo-sink
+	predicates = []
+	tasks.max = 1
+	topics = [newsarticles]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:372)
+[2021-10-09 21:38:56,263] INFO Instantiated connector mongo-sink with version 1.6.1 of type class com.mongodb.kafka.connect.MongoSinkConnector (org.apache.kafka.connect.runtime.Worker:281)
+[2021-10-09 21:38:56,264] INFO Finished creating connector mongo-sink (org.apache.kafka.connect.runtime.Worker:306)
+[2021-10-09 21:38:56,267] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = mongo-sink
+	predicates = []
+	tasks.max = 1
+	topics = [newsarticles]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:372)
+[2021-10-09 21:38:56,268] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = mongo-sink
+	predicates = []
+	tasks.max = 1
+	topics = [newsarticles]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:372)
+[2021-10-09 21:38:56,277] INFO Creating task mongo-sink-0 (org.apache.kafka.connect.runtime.Worker:505)
+[2021-10-09 21:38:56,280] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = mongo-sink
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig:372)
+[2021-10-09 21:38:56,281] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = mongo-sink
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:372)
+[2021-10-09 21:38:56,284] INFO TaskConfig values: 
+	task.class = class com.mongodb.kafka.connect.sink.MongoSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:372)
+[2021-10-09 21:38:56,291] INFO Instantiated task mongo-sink-0 with version 1.6.1 of type com.mongodb.kafka.connect.sink.MongoSinkTask (org.apache.kafka.connect.runtime.Worker:520)
+[2021-10-09 21:38:56,292] INFO JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:372)
+[2021-10-09 21:38:56,292] INFO Set up the key converter class org.apache.kafka.connect.json.JsonConverter for task mongo-sink-0 using the worker config (org.apache.kafka.connect.runtime.Worker:533)
+[2021-10-09 21:38:56,293] INFO JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = false
+ (org.apache.kafka.connect.json.JsonConverterConfig:372)
+[2021-10-09 21:38:56,293] INFO Set up the value converter class org.apache.kafka.connect.json.JsonConverter for task mongo-sink-0 using the worker config (org.apache.kafka.connect.runtime.Worker:539)
+[2021-10-09 21:38:56,294] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task mongo-sink-0 using the worker config (org.apache.kafka.connect.runtime.Worker:546)
+[2021-10-09 21:38:56,299] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:626)
+[2021-10-09 21:38:56,300] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = mongo-sink
+	predicates = []
+	tasks.max = 1
+	topics = [newsarticles]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:372)
+[2021-10-09 21:38:56,300] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = com.mongodb.kafka.connect.MongoSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = mongo-sink
+	predicates = []
+	tasks.max = 1
+	topics = [newsarticles]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:372)
+[2021-10-09 21:38:56,314] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-mongo-sink-0
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-mongo-sink
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:372)
+[2021-10-09 21:38:56,360] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:380)
+[2021-10-09 21:38:56,360] INFO Kafka version: 2.8.1 (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-10-09 21:38:56,361] INFO Kafka commitId: 839b886f9b732b15 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-10-09 21:38:56,361] INFO Kafka startTimeMs: 1633795736360 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-10-09 21:38:56,369] INFO Created connector mongo-sink (org.apache.kafka.connect.cli.ConnectStandalone:109)
+[2021-10-09 21:38:56,371] INFO [Consumer clientId=connector-consumer-mongo-sink-0, groupId=connect-mongo-sink] Subscribed to topic(s): newsarticles (org.apache.kafka.clients.consumer.KafkaConsumer:965)
+[2021-10-09 21:38:56,372] INFO Starting MongoDB sink task (com.mongodb.kafka.connect.sink.MongoSinkTask:89)
+[2021-10-09 21:38:56,374] INFO MongoSinkTopicConfig values: 
+	change.data.capture.handler = 
+	collection = news_feed
+	database = news_database
+	delete.on.null.values = false
+	document.id.strategy = com.mongodb.kafka.connect.sink.processor.id.strategy.BsonOidStrategy
+	document.id.strategy.overwrite.existing = false
+	document.id.strategy.partial.key.projection.list = 
+	document.id.strategy.partial.key.projection.type = 
+	document.id.strategy.partial.value.projection.list = 
+	document.id.strategy.partial.value.projection.type = 
+	document.id.strategy.uuid.format = string
+	errors.log.enable = false
+	errors.tolerance = none
+	field.renamer.mapping = []
+	field.renamer.regexp = []
+	key.projection.list = 
+	key.projection.type = none
+	max.batch.size = 0
+	max.num.retries = 3
+	mongo.errors.log.enable = false
+	mongo.errors.tolerance = none
+	namespace.mapper = com.mongodb.kafka.connect.sink.namespace.mapping.DefaultNamespaceMapper
+	namespace.mapper.error.if.invalid = false
+	namespace.mapper.key.collection.field = 
+	namespace.mapper.key.database.field = 
+	namespace.mapper.value.collection.field = 
+	namespace.mapper.value.database.field = 
+	post.processor.chain = [com.mongodb.kafka.connect.sink.processor.DocumentIdAdder]
+	rate.limiting.every.n = 0
+	rate.limiting.timeout = 0
+	retries.defer.timeout = 5000
+	timeseries.expire.after.seconds = 0
+	timeseries.granularity = 
+	timeseries.metafield = 
+	timeseries.timefield = 
+	timeseries.timefield.auto.convert = false
+	timeseries.timefield.auto.convert.date.format = yyyy-MM-dd[['T'][ ]][HH:mm:ss[[.][SSSSSS][SSS]][ ]VV[ ]'['VV']'][HH:mm:ss[[.][SSSSSS][SSS]][ ]X][HH:mm:ss[[.][SSSSSS][SSS]]]
+	timeseries.timefield.auto.convert.locale.language.tag = 
+	topic = newsarticles
+	value.projection.list = 
+	value.projection.type = none
+	writemodel.strategy = com.mongodb.kafka.connect.sink.writemodel.strategy.DefaultWriteModelStrategy
+ (com.mongodb.kafka.connect.sink.MongoSinkTopicConfig:372)
+[2021-10-09 21:38:56,377] INFO Errant record reporter not configured. (com.mongodb.kafka.connect.sink.MongoSinkTask:167)
+[2021-10-09 21:38:56,385] INFO WorkerSinkTask{id=mongo-sink-0} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:310)
+[2021-10-09 21:38:56,385] INFO WorkerSinkTask{id=mongo-sink-0} Executing sink task (org.apache.kafka.connect.runtime.WorkerSinkTask:196)
+[2021-10-09 21:38:56,408] INFO [Consumer clientId=connector-consumer-mongo-sink-0, groupId=connect-mongo-sink] Cluster ID: gVX3xWSvTLGJBqwtaZGUiQ (org.apache.kafka.clients.Metadata:279)
+[2021-10-09 21:38:56,413] INFO [Consumer clientId=connector-consumer-mongo-sink-0, groupId=connect-mongo-sink] Discovered group coordinator host.docker.internal:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:850)
+[2021-10-09 21:38:56,417] INFO [Consumer clientId=connector-consumer-mongo-sink-0, groupId=connect-mongo-sink] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-10-09 21:38:56,489] INFO [Consumer clientId=connector-consumer-mongo-sink-0, groupId=connect-mongo-sink] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-10-09 21:38:56,533] INFO [Consumer clientId=connector-consumer-mongo-sink-0, groupId=connect-mongo-sink] Successfully joined group with generation Generation{generationId=3, memberId='connector-consumer-mongo-sink-0-16922b9e-195c-4559-9158-707fee1de000', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-10-09 21:38:56,537] INFO [Consumer clientId=connector-consumer-mongo-sink-0, groupId=connect-mongo-sink] Finished assignment for group at generation 3: {connector-consumer-mongo-sink-0-16922b9e-195c-4559-9158-707fee1de000=Assignment(partitions=[newsarticles-0])} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:626)
+[2021-10-09 21:38:56,585] INFO [Consumer clientId=connector-consumer-mongo-sink-0, groupId=connect-mongo-sink] Successfully synced group in generation Generation{generationId=3, memberId='connector-consumer-mongo-sink-0-16922b9e-195c-4559-9158-707fee1de000', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:760)
+[2021-10-09 21:38:56,586] INFO [Consumer clientId=connector-consumer-mongo-sink-0, groupId=connect-mongo-sink] Notifying assignor about the new Assignment(partitions=[newsarticles-0]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-10-09 21:38:56,588] INFO [Consumer clientId=connector-consumer-mongo-sink-0, groupId=connect-mongo-sink] Adding newly assigned partitions: newsarticles-0 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-10-09 21:38:56,612] INFO [Consumer clientId=connector-consumer-mongo-sink-0, groupId=connect-mongo-sink] Setting offset for partition newsarticles-0 to the committed offset FetchPosition{offset=26, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[host.docker.internal:9092 (id: 0 rack: null)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:820)
+[2021-10-09 21:38:56,829] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,830] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,831] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,832] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,832] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,833] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,834] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,834] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,834] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,835] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,835] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,836] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,836] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,837] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,837] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,837] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,838] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,838] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,838] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,839] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,839] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,839] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,840] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,840] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,840] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,840] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,841] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,841] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,841] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,842] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,848] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,849] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,849] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,850] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,850] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,851] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,851] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,851] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,852] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,853] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,853] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,853] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,854] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,855] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,855] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,855] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,856] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,856] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,856] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,857] WARN Cannot overwrite the existing '_id' value. 'document.id.strategy.overwrite.existing' is set to false and the document. (com.mongodb.kafka.connect.sink.processor.DocumentIdAdder:54)
+[2021-10-09 21:38:56,858] INFO Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'} (org.mongodb.driver.cluster:71)
+[2021-10-09 21:38:56,870] INFO Opened connection [connectionId{localValue:4, serverValue:38}] to localhost:27017 (org.mongodb.driver.connection:71)
+[2021-10-09 21:38:56,871] INFO Opened connection [connectionId{localValue:3, serverValue:37}] to localhost:27017 (org.mongodb.driver.connection:71)
+[2021-10-09 21:38:56,872] INFO Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4338800} (org.mongodb.driver.cluster:71)
+[2021-10-09 21:38:56,898] INFO Opened connection [connectionId{localValue:5, serverValue:39}] to localhost:27017 (org.mongodb.driver.connection:71)

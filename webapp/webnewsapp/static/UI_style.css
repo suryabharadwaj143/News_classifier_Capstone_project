@@ -1,0 +1,61 @@
+/*Here we are defining the font family and the background color for the body*/
+body{
+    font-family: 'Times New Roman',sans-serif;
+    margin:0;
+    text-align: center;
+    padding:0;
+    background:url(BG2_img.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+  position: relative;  
+  left: 20px;  
+  top: 50px;
+  margin: 0 0 10px;
+  padding:0;
+  color: rgb(9, 12, 202);
+  font-size: 38px;
+}
+
+button[type="submit"]{
+  position: relative;
+  top: 100px;
+  right: 300px;
+  width :100px;
+  height:50px;
+  border:none;
+  outline:none;
+  background: #ffc107;
+}
+textarea[name="summary_text"]{
+    position: relative;
+    top: 60px;
+    left: 20px;
+    width :500px;
+    height:100px;
+    background: #d1c192;
+  }
+label[for="Enter the News description"]{
+    position: relative;
+    left: 20px; 
+    color: rgb(1, 32, 16);
+    font-size: 24px 
+}
+h2{
+  position: relative;  
+  left: 20px;  
+  top: 100px;
+  margin: 0 0 10px;
+  padding:0;
+  color: rgb(9, 12, 202);
+  font-size: 38px;
+}
+p{
+    position: relative;
+    top: 120px;
+    left: 20px; 
+    color: rgb(1, 32, 16);
+    font-size: 24px
+}

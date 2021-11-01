@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='UI_style.css') }}">
+    <title>output_page</title>
+    <script>function validate()
+        {
+            if(document.getElementById('summary_text').value == '') {      
+                alert("Please enter some news desription to predict");
+                      document.getElementById('summary_text').focus();
+                return false;  
+            }
+                else{
+                return true;
+            }
+        }
+        </script>
+</head>
+<body>
+
+<h1>News Predicted</h1>
+<form action="/news_predictor" method="post" id="form1" onsubmit="return validate();">
+<label for="Enter the News description">Enter the News description:</label>
+
+<textarea id="summary_text" name="summary_text" rows="4" cols="50" form="form1">
+</textarea>
+<button type="submit" form="form1" value="Submit">Classify</button>
+</form>
+<h2>Predicted output : {{output}}</h2>
+<p>Predicted for Text Entered : {{Text_recieved}}</p>
+</body>
+</html>

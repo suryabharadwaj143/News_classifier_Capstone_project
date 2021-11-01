@@ -1,0 +1,11 @@
+#before running the docker-compose up use docker-compose rm -svf
+version: '3'
+services:
+
+  webnewsapp:
+    deploy:
+      replicas: 1
+    build: webnewsapp
+    container_name: webnewsapp1
+    ports:
+      - "5000:5000"
